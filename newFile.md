@@ -1,8 +1,5 @@
 # StateLess vs Stateful Protocol
 
-[![hackmd-github-sync-badge](https://hackmd.io/bHnQdqGQQE2o9GKS4CtzpQ/badge)](https://hackmd.io/bHnQdqGQQE2o9GKS4CtzpQ)
-
-
 The state of an application whether it is stateless or stateful depends on how the state of interaction with the application is managed/stored.
 
 ## StateLess
@@ -12,7 +9,7 @@ It does not save or reference information about previous operations. Every time 
 # ghvgvjhv
 
 
-
-
-sasdfsasdfgds
+```typescript=
+let a=1;
+```
 
