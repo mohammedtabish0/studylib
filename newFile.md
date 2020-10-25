@@ -18,22 +18,20 @@ Server Processes each request on the basis of information passed to that request
 
 When the server requests a list of recent messages using the Facebook API, it issues a GET request with token and date. The response is independent of any server state, and everything is stored on the client’s machine in the form of a cache.
 
-There is no relationship with the previous, current & next request. In Stateless, the client does not wait for synchronization from the server. There is no process completion concept in serverless architecture for Big Data. So it’s faster.
+There is no relationship with the previous, current & next request. In Stateless, the client does not wait for synchronization from the server. There is no process completion concept in serverless architecture so it’s faster.
 
 Stateless Architecture means the app is dependent only on Third-party storage because it doesn’t store any kind of state in memory or on its disk. All data it needs or requires has to fetch from some other stateful service (Database) or are present in the CRUD request.
 
 The stateless design simplifies the server design because there is no need to dynamically allocate storage to deal with conversations in progress. If a client session dies in mid-transaction, no part of the system needs to be responsible for cleaning up the present state of the server. A disadvantage of statelessness is that it may be necessary to include additional information in every request, and this extra information will need to be interpreted by the server.
 
-Session state is therefore kept entirely on the client. client is responsible for storing and handling all application state-related information on client side.
-
-It also means that the client is responsible for sending any state information to the server whenever it is needed.
+Session state is therefore kept entirely on the client. client is responsible for storing and handling all application state-related information on client side and sending this information to the server whenever it is needed.
 
 Server and client are loosely coupled and can act independently
 
 **Examples:**
 IP,HTTP,CDN,DNS,REST,SOAP
 
-# Stateful
+## Stateful
 
 Stateful applications maintains the state in session and uses the information stored from earlier requests. Because of this reason these applications scales very poorly.
 
@@ -48,7 +46,7 @@ A stateless protocol can be forced to behave as if it were stateful. This can be
 ==A TCP connection-oriented session is a stateful connection because both systems maintain information about the session itself during its life.==
 
 
-# REST API VS SOAP API
+# REST API vs SOAP API
 
 **SOAP – Simple Object Access Protocol**
 
@@ -62,7 +60,7 @@ The XML used to make requests and receive responses in SOAP can become extremely
 One of the most important SOAP features is built-in error handling. If there’s a problem with your request, the response contains error information that you can use to fix the problem.
 
 
-REST provides a lighter-weight alternative.Instead of using XML to make a request, REST (usually) relies on a simple URL. In some situations you must provide additional information, but most web services using REST rely exclusively on using the URL approach. REST can use four different HTTP 1.1 verbs (GET, POST, PUT, and DELETE) to perform tasks.
+REST provides a lighter-weight alternative.Instead of using XML to make a request, REST (usually) relies on a simple URL. In some situations you must provide additional information, but most web services using REST rely exclusively on using the URL approach. REST can use four different HTTP methods (GET, POST, PUT, and DELETE) to perform tasks.
 
 REST supports XML,JSON,CSV,RSS,YML,plain-text,etc and doesn't rely exclusively on XML.
 
